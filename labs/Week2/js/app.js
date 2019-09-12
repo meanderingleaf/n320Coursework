@@ -1,3 +1,24 @@
+var posts = [
+    { user: "XX", content: "XX" },
+    { user: "YY", content: "YY" },
+    { user: "ZZ", content: "ZZ" }
+];
+
+
+class Posts {
+    displayList() {
+        showUserPosts(postData);
+    }
+}
+
+function showUserPosts(posts) {
+    posts.forEach((post) => {
+        var newDiv = document.createElement("div");
+        newDiv.innerHTML = post.content;
+        document.body.appendChild(newDiv);
+    })
+}
+
 class Drop {
     constructor() {
         this.x = 40;
