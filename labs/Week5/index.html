@@ -29,12 +29,24 @@
             border-radius: 5px;
             background: #7ecfc0;
         }
+
+        .cardActive {
+            transition: transform .3s ease, opacity .3s ease;
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+
+        .cardOut {
+            transition: transform  .3s ease, opacity .3s ease;
+            transform: rotate(45deg);
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
     
     <div id="app">
-        <student-card v-bind:student="currentStudent"></student-card>
+        <student-card v-bind:student="currentStudent" v-bind:isactive="cardActive"></student-card>
         <div class="arrow" v-on:click="arrowClicked"> > </div>
     </div>
 
