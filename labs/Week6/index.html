@@ -24,10 +24,10 @@
     <div id="app">
         <div v-if="gameOver" class="gover">Game Over</div>
         <div class="gameSpace">
-            <div  class="row" 
+            <div  class="row {p}" 
                   v-for="(row, indexR) in grid" 
                   v-bind:key="row">
-                <div class="cell" 
+                <div class="cell"
                      v-for="(item, indexC) in row"
                      v-bind:key="item"
                      v-on:click="selectCell(indexR, indexC)">
