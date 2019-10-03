@@ -5,7 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    
+    <style>
+        .row {
+            display: flex;
+        }
+
+        .cell {
+            width: 30px;
+            height: 30px;
+            margin: 3px;
+            padding: 3px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     
@@ -17,7 +29,8 @@
                   v-bind:key="row">
                 <div class="cell" 
                      v-for="(item, indexC) in row"
-                     v-bind:key="item">
+                     v-bind:key="item"
+                     v-on:click="selectCell(indexR, indexC)">
                      {{ item }}
                 </div>
             </div>
